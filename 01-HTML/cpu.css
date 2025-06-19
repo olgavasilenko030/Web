@@ -29,3 +29,20 @@ ol
     list-style-type:"-";
    /* padding-left:10px;*/
 }
+figure
+{
+    text-align:center;
+    font-style:italic;
+}
+a
+{
+color:aliceblue;
+}
+a:hover,a:visited:hover
+{
+    color:yellow;
+}
+a:visited
+{
+    color:greenyellow;
+}
