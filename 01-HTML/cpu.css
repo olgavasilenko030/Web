@@ -4,7 +4,23 @@
     color:gray;
    /* font-family:'Segoe UI';*/
 }
-h4 
+h1
+{
+    color:aliceblue;
+}
+h2
+{
+    color:azure;
+}
+h3
+{
+    color:azure;
+}
+h4
+{
+    color:azure;
+}
+h5
 {
     text-align: right;
     font-family: 'Embed code';
