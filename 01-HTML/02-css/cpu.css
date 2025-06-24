@@ -1,0 +1,125 @@
+﻿body
+{
+    background-color:#323232;
+    color:gray;
+   /* font-family:'Segoe UI';*/
+}
+h1
+{
+    color:aliceblue;
+}
+h2
+{
+    color:azure;
+}
+h3
+{
+    color:azure;
+}
+h4
+{
+    color:azure;
+}
+h5
+{
+    text-align: right;
+    font-family: 'Embed code';
+}
+p 
+{
+    text-align: justify;
+    font-size: 14pt;
+    font-family: 'Embed code';
+    border:solid 1px;
+    padding:11px 22px 33px;
+    margin:22px;
+}
+ol
+{
+    list-style-type:upper-roman;
+    /*list-style-type:lower-alpha;*/
+}
+.nesting-lvl-1
+{
+    list-style-type:circle;
+}
+.nesting-lvl-2
+{
+    list-style-type:"-";
+   /* padding-left:10px;*/
+}
+figure
+{
+    text-align:center;
+    font-style:italic;
+}
+a
+{
+color:aliceblue;
+}
+a:hover,a:visited:hover
+{
+    color:yellow;
+}
+a:visited
+{
+    color:greenyellow;
+}
+table
+{
+    border:solid 2px;
+    margin:0 auto;
+    border-spacing:0;
+    border-color:darkslateblue;
+}
+thead
+{
+    background-color:#6b5fb5;
+    color:white;
+    border:solid 2px;
+}
+th
+{
+    padding:11px 33px;
+    border:solid 2px;
+    border-color:darkslateblue;
+}
+
+td
+{
+    border: solid 2px;
+    border: solid 1px #aeaed3;
+    text-align: center;
+}
+.row-header
+{
+    /*background-color: #6b5fb5;*/
+    color:white;
+    text-align:left;
+}
+    td[colspan="3"]
+    {
+        text-align: center;
+        color:white;
+        background-color: #6b5fb5;
+    }
+table-first-header
+{
+    dorder-left: solid 2px #aeaed3;
+}
+table-last-header
+{
+    dorder-right: solid 2px #aeaed3;
+}
+
+div
+{
+    border:solid 1px;
+   /* margin:22px 32px;*/ /*22px-вверх\низ,32px -лево\право*/
+   /* margin:22px 33px 44px;*/ /*22px-вверх,33px -право\лево 44 px -низ*/
+    margin:22px 33px 44px 55px; /*22px-вверх,33px -право 44 px -низ 55px-слево по часовой стрелки начиная сверху*/
+    /*margin-left:32px;
+    margin-right:12px;
+    margin-top:22px;
+    margin-bottom:32px;*/
+}
