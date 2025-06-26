@@ -20,16 +20,19 @@
 					   minlength="3"
 					   maxlength="24"
 					   required
-					   pattern="^[A-ZА-яa-zа-я]*">
+					   pattern="^[A-ZА-Яa-zа-я]*">
 			</div>
 			<div>
 				<label for="password">Пароль:</label>
 				<input type="password"
 					   id="password"
 					   name="password"
-					   size="32"
-					   placeholder="Пароль - Рыбамеч"
+					   size="62"
+					   placeholder="Обязательно: 1 большая буква, 1 маленькая, цифра, символ"
+					   pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[~!@#$%^&*\(\)_\[\]\{\}+=\-\/\\'&quot\;:,.?\|<>]).{8,}$"
 					   minlength="8">
+				<!--pattern="[A-ZА-Я]{1,}[a-zа-я]{1,}[0-9]{1,}[A-Za-z\W+]{1,25}"
+					\/ik+0Ry-->
 			</div>
 			<div>
 				<label for="emal">E-mail:</label>
