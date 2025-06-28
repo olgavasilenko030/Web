@@ -1,0 +1,21 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+body
+{
+    background-color:lightcyan;
+    font-family: Bitcount Grid Double;
+}
+h1
+{
+    position:sticky;
+    top:0px;
+    background-color:lightcyan;
+}
+.logo
+{
+    width:300px;
+    height:250px;
+    position:fixed;
+    z-index:-1;
+    left:200px;
+    top:150px;
+}
