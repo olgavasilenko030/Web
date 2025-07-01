@@ -6,7 +6,7 @@
 }
 .main_window
 {
-    border:solid 1px;
+   /* border:solid 1px;*/
     /*position:relative;
     left:400px;
     top:100px;*/
@@ -28,7 +28,13 @@
     justify-content:space-between;
     align-items:center;
     padding:8px;
-    background-color:blue;
+    color:white;
+    background-image:linear-gradient(
+        #77CCFF, 
+        #0369E2,#0369E2,#0369E2, 
+        #0469FC,#0469FC,#0469FC
+        );
+    box-shadow:inset 0px 0px 4px 1px #002195;
     border-top-left-radius:4px;
     border-top-right-radius:4px;
 }
@@ -37,7 +43,43 @@
     display:flex;
     align-items:center;
 }
-.control_button{
-    width:24px;
-    height:24px;
+.control_button, .control_button:disabled, .control_button:disabled:hover
+{
+    width: 28px;
+    height: 28px;
+    border: solid 1px white;
+    border-radius: 5px;
+    /*border-color: white;*/
+    margin: 1px;
+    text-align: center;
+    padding: -18px;
+    /*font-size:22px;*/
+    background-image: linear-gradient(to bottom right,#55A1FF,#0038B5);
+    box-shadow: inset 2px 1px 3px 0px #77A1F5;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
 }
+.control_button:hover
+{
+    /* border-color:lightgray;*/
+    background-image: linear-gradient(to bottom right, #75C1FF, #2045D5);
+    box-shadow: inset 0px 0px 3px 3px #77A1F5;
+    /*box-shadow: inset 23px 23px 23px 23px #77A1F5;*/
+}
+.control_button:disabled, .control_button:disabled:hover
+{
+    color:lightgray;
+    border-color:lightgray;
+  
+}
+#close_button
+{
+    background-image: linear-gradient(to bottom right, #C97475, #FF3010);
+    box-shadow: inset 2px 1px 3px 1px #C49A9B;
+}
+    #close_button:hover
+    {
+        background-image: linear-gradient(to bottom right, #E98485, #FF3020);
+        box-shadow: inset 0px 0px 3px 3px #C4949B;
+    }
