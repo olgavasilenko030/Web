@@ -6,16 +6,17 @@
 }
 .main_window
 {
-   /* border:solid 1px;*/
+    /* border:solid 1px;*/
     /*position:relative;
     left:400px;
     top:100px;*/
-    align-self:center;
-    width:400px;
-    height:460px;
-    background:rgb(236,233,216);
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
+    align-self: center;
+    width: 400px;
+    height: 460px;
+    background: rgb(236,233,216);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    /*box-shadow: 0 0 5px 5px #0469EC;*/
 }
 #app_icon
 {
@@ -42,6 +43,7 @@
 {
     display:flex;
     align-items:center;
+    text-shadow:1px 1px 0px darkblue;
 }
 .control_button, .control_button:disabled, .control_button:disabled:hover
 {
@@ -83,3 +85,41 @@
         background-image: linear-gradient(to bottom right, #E98485, #FF3020);
         box-shadow: inset 0px 0px 3px 3px #C4949B;
     }
+
+/*---------------------------*/
+.client-rect
+{
+    width:auto;/*391px;*/
+    height:312px;
+    /*border:solid 5px;
+    border-top:none;*/
+    /*border-image:linear-gradient(to right,#000051D7,#00E56718, #000051D7)1;*/
+   /*border-color:#0469EC;*/
+   display:block;
+}
+.main-area
+{
+    display:flex;
+    justify-content:space-between;
+}
+#bottom-border
+{
+    width:100%;
+    height:5px;
+    background-color:darkblue;
+    background-image: linear-gradient(to right, /*#002277CC,*/#0055BBFF,#001177CC)
+}
+#left-border
+{
+    width: 5px;
+    height: 410px;
+    /*background-color:darkblue;*/
+    background-image: linear-gradient(to right, #0022BBFF,#0055FFFF,#0022BBFF)
+}
+#right-border
+{
+    width: 5px;
+    height: 410px;
+    background-color: darkblue;
+    background-image: linear-gradient(to right, #001177CC,#0055BBFF,#001177CC)
+}
