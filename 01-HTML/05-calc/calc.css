@@ -203,6 +203,7 @@ input[type=text]
 
 .buttons
 {
+    margin-top: 10px;
     display: flex;
     justify-content: left;
 }
@@ -211,7 +212,7 @@ input[type=text]
     {
         width: 50px;
         height: 40px;
-        margin: 5px 10px;
+        margin: 5px;
         border:solid 1px darkblue;
         border-radius:5px;
     }
@@ -219,9 +220,14 @@ input[type=text]
 .memory-buttons
 {
     /* border:solid 1px;*/
-    display: flex;
+   /* display: flex;
     flex-direction: column;
     align-items: center;
+   */
+   display:grid;
+   grid-template-columns: 50px;
+   grid-template-rows: 40px 40px 40px 40px;
+   grid-gap:10px;
    /* margin:1px 0 0 0;*/
 }
 
@@ -233,9 +239,9 @@ input[type=text]
     .memory-buttons > #square
     {
         width: 32px;
-        height: 31.85px;
+        height: 32px;
         border: inset 2px;
-        margin: 5px 10px;
+        margin: 7px 10px 6px;
     }
 
 .main-block button
@@ -247,18 +253,37 @@ input[type=text]
 {
     width: 85px;
     color: red;
-    margin: 3px;
+  
 }
-
+.wide-buttons
+{
+    margin:0 15px;
+}
+.digit-and-operations
+{
+    display:flex;
+    justify-content:left;
+}
 .digit-buttons
 {
     display: grid;
     grid-template-columns: 50px 50px 50px;
     grid-template-rows: 40px 40px 40px 40px;
     grid-gap: 10px;
+    margin-left:10px;
 }
 
     .digit-buttons button
     {
         color: darkblue;
     }
+
+.operational-buttons, .result
+{
+    display:grid;
+    grid-template-columns:50px;
+    grid-template-rows:40px 40px 40px 40px;
+    grid-gap:10px;
+    margin-left:10px;
+    
+}
