@@ -58,3 +58,12 @@ img[src="img/sun.png"]
         /*content:url('img/sun.png');*/
         filter:brightness(0) invert(1);
     }
+    #photo
+    {
+        border:solid 1px;
+    }
+#photo-container
+{
+    width:400px;
+    height:300px;
+}

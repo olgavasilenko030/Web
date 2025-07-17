@@ -34,3 +34,25 @@ function SwitchBackground()
     document.getElementById("switchBackground").style.transition = `background-image ${delay} s`;
     document.body.className = document.body.className === "light" ? "dark" : "light";
 }
+document.addEventListener("mousemove", function (event)
+{
+    let x = event.clientX;
+    let y = event.clientY;
+    document.getElementById("mouse").innerHTML = `X=${x}, Y=${y}`;
+}
+);
+function setImage()
+{
+    let filename = document.getElementById("image-file");//.value;
+    ///Фото грузится только с папки проекта
+    //console.log(filename);
+    //let splitted_filename = filename.split('\\');
+    //document.getElementById("photo").src = splitted_filename[splitted_filename.length-1];
+    let reader = new FileReader();
+    reader.onload = function (e)
+    {
+        document.getElementById("photo").src = e.target.result;
+    }
+    reader.readAsDataURL(filename.files[0]);
+        //Фото грузится с любой папки
+}
