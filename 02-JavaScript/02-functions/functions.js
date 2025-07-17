@@ -1,10 +1,10 @@
-// JavaScript source code
+п»ї// JavaScript source code
 //alert("Functions");
 function calculatePower()
 {
-let base = Number(document.getElementById('base').value);
-let exponent = Number(document.getElementById('exponent').value);
-document.getElementById('power').value = Power(base, exponent);
+    let base = Number(document.getElementById('base').value);
+    let exponent = Number(document.getElementById('exponent').value);
+    document.getElementById('power').value = Power(base, exponent);
 }
 
 function Power(base, exponent)
@@ -44,7 +44,7 @@ document.addEventListener("mousemove", function (event)
 function setImage()
 {
     let filename = document.getElementById("image-file");//.value;
-    ///Фото грузится только с папки проекта
+    ///Р¤РѕС‚Рѕ РіСЂСѓР·РёС‚СЃСЏ С‚РѕР»СЊРєРѕ СЃ РїР°РїРєРё РїСЂРѕРµРєС‚Р°
     //console.log(filename);
     //let splitted_filename = filename.split('\\');
     //document.getElementById("photo").src = splitted_filename[splitted_filename.length-1];
@@ -54,5 +54,39 @@ function setImage()
         document.getElementById("photo").src = e.target.result;
     }
     reader.readAsDataURL(filename.files[0]);
-        //Фото грузится с любой папки
+    //Р¤РѕС‚Рѕ РіСЂСѓР·РёС‚СЃСЏ СЃ Р»СЋР±РѕР№ РїР°РїРєРё
+}
+document.body.onload = function tick_timer()
+{
+    let time = new Date();
+    document.getElementById("full-time").innerHTML = time;
+    document.getElementById("hours").innerHTML = addLeadingZero(time.getHours());
+    document.getElementById("minutes").innerHTML = addLeadingZero(time.getMinutes());
+    document.getElementById("seconds").innerHTML = addLeadingZero(time.getSeconds());
+
+    document.getElementById("year").innerHTML = time.getFullYear();
+    document.getElementById("month").innerHTML = addLeadingZero(time.getMonth() + 1);
+    document.getElementById("day").innerHTML = addLeadingZero(time.getDate());
+
+    document.getElementById("weekday").innerHTML = time.toLocaleDateString("ru", {weekday:'long'});
+
+    /*if (document.getElementById("show-date").checked)
+    {
+        document.getElementById("current-date").style.visibility = "visible";
+    }
+    else
+    {
+        document.getElementById("current-date").style.visibility = "hidden";
+    }*/
+
+    document.getElementById("current-date").style.visibility =
+        document.getElementById("show-date").checked ? "visible" : "hidden";
+    document.getElementById("weekday").style.visibility =
+        document.getElementById("show-weekday").checked ? "visible" : "hidden";
+
+    setTimeout(tick_timer, 100);//Р¤СѓРЅРєС†РёСЏ setTimeout(tick_timer, delay) РІС‹Р·С‹РІР°РµС‚ С„СѓРЅС†РёСЋ 'function'  СЃ Р·Р°РґРµСЂР¶РєРѕР№ 'delay'
+}
+function addLeadingZero(number)
+{
+    return number < 10 ? "0" + number : number;
 }
