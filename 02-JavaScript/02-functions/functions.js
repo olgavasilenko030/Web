@@ -130,9 +130,12 @@ function tickCountdown()
 
     // Определяем промежуток времени до указанной даты:
     let duration = targetTime - now;// Разность дат вычисляется в формате Timestamp
-    document.getElementById("duration").innerHTML = duration;
-    //Timestamp - это количество миллисекунд от 1 января 1970.
 
+    document.getElementById("current-time-check").innerHTML = `current time:${now}`;
+    document.getElementById("target-time-check").innerHTML = `target time:${targetTime}`;
+    document.getElementById("duration").innerHTML = duration;
+
+    //Timestamp - это количество миллисекунд от 1 января 1970.
     let timestamp = Math.trunc(duration / 1000);
     document.getElementById("timestamp").innerHTML = timestamp;
 
@@ -141,6 +144,32 @@ function tickCountdown()
     document.getElementById("target-time-value").innerHTML = targetTime;
     
     console.log(`now timezoneOffset:\t${now.getTimezoneOffset()}`);
+
+    //////////////////////////////////////////////////////////////////////////////
+    const SECOND_IN_MINUTE = 60;
+    const SECONDS_IN_HOUR = 3600;
+    const SECONDS_IN_DAY = 86400;
+    const SECONDS_IN_WEEK = SECONDS_IN_DAY * 7;
+    const DAYS_IN_MONTH = 365.25 / 12;
+    const SECONDA_IN_MONTH = SECONDS_IN_DAY * DAYS_IN_MONTH;
+    const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365 + SECONDS_IN_HOUR * 6;
+
+    let time_of_day = timestamp % SECONDS_IN_DAY;
+    let hours = Math.floor(time_of_day / SECONDS_IN_HOUR);
+    if (hours > 0) time_of_day = (time_of_day % (hours * SECONDS_IN_HOUR));
+
+    let minutes = Math.floor(time_of_day / SECOND_IN_MINUTE);
+    if (minutes > 0) time_of_day = (time_of_day % (minutes * SECOND_IN_MINUTE));
+
+    let seconds = time_of_day;
+    //////////////////////////////////////////////////////////////////////////////////////
+
+    document.getElementById("hours-unit").innerHTML = addLeadingZero(hours);
+    document.getElementById("minutes-unit").innerHTML = addLeadingZero(minutes);
+    document.getElementById("seconds-unit").innerHTML = addLeadingZero(seconds);
+
+
+    //////////////////////////////////////////////////////////////////////////////////////
 
     setTimeout(tickCountdown, 100);
 }
